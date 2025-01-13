@@ -4,7 +4,11 @@ void setup() {
 }
 
 //🎯Variable Declarations Go Here
-var fireworkX = 20;
+var x = 20;
+var y =20;
+var starX = 31;
+var starRaduis = 31;
+
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
@@ -13,13 +17,20 @@ draw = function(){
   
    if(mousePressed){
     showXYPositions();
+   
+   starSize= starSize+3;
+    sunX=sunX+1;
     
   }
   
   //🎯Animation Code Goes Here
-  rect(fireworkX, 15, 10, 10);
+  ellipse(starX, 40, 20, 20);
   
-  fireworkX = fireworkX + 1;
+  starX = starX + 1;
+
+//star
+fill(224, 234, 254);
+ellipse(200,100, starRaduis, starRaduis);
 
 }
 
